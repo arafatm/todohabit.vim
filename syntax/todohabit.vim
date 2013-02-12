@@ -12,12 +12,14 @@ syn match todoSubList     /^- .*/ "contains=todoProject,todoContext
 syn match todoContext     /@\S\+/   contained
 syn match todoProject     /+\S\+/   contained
 syn match todoDone        /^x .*/
+syn match todoNotDone        /^z .*/
 
 hi todoHeader         ctermfg=magenta
 hi todoDone            ctermfg=darkgrey
+hi todoNotDone            ctermfg=darkgrey
 hi todoDue            ctermfg=red
-hi todoPriorityA      ctermfg=green
-hi todoPriorityB      ctermfg=yellow
+hi todoPriorityA      ctermfg=darkgreen
+hi todoPriorityB      ctermfg=darkyellow
 hi todoSubList        ctermfg=white
 hi todoContext        ctermfg=lightcyan
 hi todoProject        ctermfg=blue

@@ -4,6 +4,7 @@ elseif exists("b:current_syntax")
   finish
 endif
 
+" Todos
 syn match todoHeader      /^#\+ .*/
 syn match todoDue   /\d\{4}-\d\{2}-\d\{2} .*/ "contains=todoProject,todoContext
 syn match todoPriorityA   /^A .*/ "contains=todoProject,todoContext
@@ -24,10 +25,11 @@ hi todoSubList        ctermfg=white
 hi todoContext        ctermfg=lightcyan
 hi todoProject        ctermfg=blue
 
+" Habit
 syn match habitHead /^\d\{4} .*/
 syn match habitHead /^\u \d\{2}-\d\{2}/
 syn match habitX  / x[$ ]/
-syn match habitMissed  / -[\$ ]/
+syn match habitMissed  / [-\*] /
 syn match habitSkip  / |[$ ]/
 hi habitX       ctermfg=black ctermbg=darkgreen
 hi habitMissed  ctermfg=black ctermbg=darkred

@@ -1,1 +1,1 @@
-au! BufRead,BufNewFile todo.txt,archive.txt set filetype=todohabit
+au! BufRead,BufNewFile habit.txt,todo.txt,archive.txt set filetype=todohabit

@@ -26,13 +26,13 @@ hi todoContext        ctermfg=lightcyan
 hi todoProject        ctermfg=blue
 
 " Habit
-syn match habitHead /^\d\{4} .*/
-syn match habitHead /^\u \d\{2}-\d\{2}/
-syn match habitX  / x[$ ]/
-syn match habitMissed  / [-\*] /
-syn match habitSkip  / |[$ ]/
-hi habitX       ctermfg=black ctermbg=darkgreen
-hi habitMissed  ctermfg=black ctermbg=darkred
+syn match habitHead   /^| \d\{4} .*/
+syn match habitHead   /^| \u \d\{2}-\d\{2}/ms=s+2
+syn match habitDone   /|  x  |/ms=s+2,me=e-2
+syn match habitSkip   /|  -  |/ms=s+2,me=e-2
+syn match habitMiss   /|     |/ms=s+2,me=e-2
+hi habitDone    ctermfg=black ctermbg=darkgreen
 hi habitSkip    ctermfg=black ctermbg=yellow
-hi habitHead  ctermfg=lightyellow
-hi habitRow   ctermfg=lightyellow
+hi habitMiss    ctermfg=black ctermbg=darkred
+hi habitHead    ctermfg=lightyellow
+hi habitRow     ctermfg=lightyellow

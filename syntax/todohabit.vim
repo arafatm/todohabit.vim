@@ -28,9 +28,8 @@ hi todoProject        ctermfg=blue
 " Habit
 syn match habitHead   /^| \d\{4} .*/
 syn match habitHead   /^| \u \d\{2}-\d\{2}/ms=s+2
-syn match habitDone   /|  x  |/ms=s+2,me=e-2
-syn match habitSkip   /|  -  |/ms=s+2,me=e-2
-syn match habitMiss   /|     |/ms=s+2,me=e-2
+syn match habitDone   /| [x0-9] |/ms=s+1,me=e-1
+syn match habitMiss   /| - |/ms=s+1,me=e-1
 hi habitDone    ctermfg=black ctermbg=darkgreen
 hi habitSkip    ctermfg=black ctermbg=yellow
 hi habitMiss    ctermfg=black ctermbg=darkred

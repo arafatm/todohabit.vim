@@ -6,13 +6,13 @@ endif
 
 " Todos
 syn match todoHeader      /^#\+ .*/
-syn match todoDue   /\d\{4}-\d\{2}-\d\{2} .*/ "contains=todoProject,todoContext
-syn match todoPriorityA   /^A .*/ "contains=todoProject,todoContext
-syn match todoPriorityB   /^B .*/ "contains=todoProject,todoContext
-syn match todoSubList     /^- .*/ "contains=todoProject,todoContext
+syn match todoDue   /^- \[ ] \d\{4}-\d\{2}-\d\{2} .*/ "contains=todoProject,todoContext
+syn match todoPriorityA   /^- \[ ] A .*/ "contains=todoProject,todoContext
+syn match todoPriorityB   /^- \[ ] B .*/ "contains=todoProject,todoContext
+syn match todoSubList     /^\s\+- \[ ] .*/ "contains=todoProject,todoContext
 syn match todoContext     /@\S\+/   contained
 syn match todoProject     /+\S\+/   contained
-syn match todoDone        /^x .*/
+syn match todoDone        /^- [x] .*/
 syn match todoNotDone     /^z .*/
 
 hi todoHeader         ctermfg=magenta
